@@ -23,15 +23,16 @@ class Whitelist
 
     /**
      * @var int
-     *
-     * @ORM\Column(name="CustomerID", type="integer")
+     * @ORM\ManyToOne(targetEntity="Customer")
+     * @ORM\JoinColumn(name="customerID", referencedColumnName="id")
      */
     private $customerID;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="ParameterID", type="integer")
+     * @ORM\ManyToOne(targetEntity="Parameter")
+     * @ORM\JoinColumn(name="parameterID", referencedColumnName="id")
      */
     private $parameterID;
 

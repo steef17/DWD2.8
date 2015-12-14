@@ -23,8 +23,8 @@ class Blacklist
 
     /**
      * @var int
-     *
-     * @ORM\Column(name="CustomerID", type="integer", unique=true)
+     * @ORM\OneToOne(targetEntity="Customer")
+     * @ORM\JoinColumn(name="CustomerID", referencedColumnName="id")
      */
     private $customerID;
 

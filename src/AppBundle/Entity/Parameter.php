@@ -26,6 +26,7 @@ class Parameter
      *
      * @ORM\Column(name="Rule", type="string", length=255)
      */
+
     private $rule;
 
     /**
