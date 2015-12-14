@@ -7,16 +7,16 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Customerid</th>
+                <th>Name</th>
                 <th>Type</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-        {% for blacklist in blacklists %}
+        {% for blacklist in data %}
             <tr>
                 <td><a href="{{ path('blacklist_show', { 'id': blacklist.id }) }}">{{ blacklist.id }}</a></td>
-                <td>{{ blacklist.customerID }}</td>
+                <td>{{ blacklist.customerID.name }}</td>
                 <td>{{ blacklist.type }}</td>
                 <td>
                     <ul>

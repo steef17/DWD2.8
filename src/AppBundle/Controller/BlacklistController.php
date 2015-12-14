@@ -25,11 +25,12 @@ class BlacklistController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
+        $query = $em->createQuery('SELECT b, c FROM AppBundle:Blacklist b JOIN b.customerID c')->getResult();
 
         $blacklists = $em->getRepository('AppBundle:Blacklist')->findAll();
 
         return $this->render('blacklist/index.html.twig', array(
-            'blacklists' => $blacklists,
+            'data' => $query,
         ));
     }
 

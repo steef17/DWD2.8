@@ -10,4 +10,15 @@ namespace AppBundle\Repository;
  */
 class ParameterRepository extends \Doctrine\ORM\EntityRepository
 {
+
+
+    public function checkParamters(){
+
+
+    }
+
+    public function postcodeParameter(string $postcode){
+        $postcodeArray = array();
+    }
+
 }
