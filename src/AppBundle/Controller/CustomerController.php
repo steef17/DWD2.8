@@ -27,9 +27,11 @@ class CustomerController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $customers = $em->getRepository('AppBundle:Customer')->findAll();
+        $parameterRepo = $em->getRepository('AppBundle:Parameter');
 
         return $this->render('customer/index.html.twig', array(
             'customers' => $customers,
+            'parameterRepo' => $parameterRepo,
         ));
     }
 

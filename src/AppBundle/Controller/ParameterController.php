@@ -27,9 +27,10 @@ class ParameterController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $parameters = $em->getRepository('AppBundle:Parameter')->findAll();
-
+        $postcode = $em->getRepository('AppBundle:Parameter')->checkParameters(1);
         return $this->render('parameter/index.html.twig', array(
             'parameters' => $parameters,
+            'postcode' => $postcode,
         ));
     }
 
