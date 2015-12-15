@@ -15,6 +15,7 @@
             </tr>
         </thead>
         <tbody>
+        {{ dump()}}
         {% for customer in customers %}
             <tr>
                 <td><a href="{{ path('customer_show', { 'id': customer.id }) }}">{{ customer.id }}</a></td>
