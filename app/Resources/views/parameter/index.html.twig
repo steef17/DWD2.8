@@ -8,15 +8,18 @@
             <tr>
                 <th>Id</th>
                 <th>Rule</th>
+                <th>Name</th>
                 <th>Isdeleted</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
+        {{ postcode }}
         {% for parameter in parameters %}
             <tr>
                 <td><a href="{{ path('parameter_show', { 'id': parameter.id }) }}">{{ parameter.id }}</a></td>
                 <td>{{ parameter.rule }}</td>
+                <td>{{ parameter.name }}</td>
                 <td>{% if parameter.isDeleted %}Yes{% else %}No{% endif %}</td>
                 <td>
                     <ul>

@@ -16,6 +16,7 @@ class ParameterType extends AbstractType
     {
         $builder
             ->add('rule')
+            ->add('name')
             ->add('isDeleted')
         ;
     }
